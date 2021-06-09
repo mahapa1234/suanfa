@@ -14,24 +14,22 @@
 """
 
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        res = []
-        for i in range(len(nums) - 1):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    res = [i, j]
-                    return res
-        return res
+def twoSum(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    res = []
+    for i in range(len(nums) - 1):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                res = [i, j]
+                return res
+    return res
 
 
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]
-    test1 = Solution()
-    print(test1.twoSum(nums, 9))
+    print(twoSum(nums, 9))
 
